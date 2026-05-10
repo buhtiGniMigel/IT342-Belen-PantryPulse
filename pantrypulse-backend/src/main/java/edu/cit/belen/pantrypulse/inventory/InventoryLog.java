@@ -1,4 +1,4 @@
-package edu.cit.belen.pantrypulse.model;
+package edu.cit.belen.pantrypulse.inventory;
 import jakarta.persistence.*;
 
 @Entity

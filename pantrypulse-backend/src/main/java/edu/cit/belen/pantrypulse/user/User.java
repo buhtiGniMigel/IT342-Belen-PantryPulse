@@ -1,4 +1,4 @@
-package edu.cit.belen.pantrypulse.model;
+package edu.cit.belen.pantrypulse.user;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 @Entity
 @Table(name = "users")
 public class User {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -25,6 +25,10 @@ public class User {
 
     private LocalDateTime createdAt = LocalDateTime.now();
 
+    // ✅ Transient — used for incoming JSON only, NOT saved to DB
+    @Transient
+    private String password;
+
     // Getters and Setters
     public Long getId() { return id; }
     public String getFirstName() { return firstName; }
@@ -36,4 +40,8 @@ public class User {
     public String getPasswordHash() { return passwordHash; }
     public void setPasswordHash(String passwordHash) { this.passwordHash = passwordHash; }
     public LocalDateTime getCreatedAt() { return createdAt; }
+
+    // ✅ Transient password getter/setter
+    public String getPassword() { return password; }
+    public void setPassword(String password) { this.password = password; }
 }

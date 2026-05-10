@@ -1,6 +1,5 @@
-package edu.cit.belen.pantrypulse.repository;
+package edu.cit.belen.pantrypulse.recipe;
 
-import edu.cit.belen.pantrypulse.model.Recipe;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

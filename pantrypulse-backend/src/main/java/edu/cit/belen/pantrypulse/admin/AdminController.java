@@ -1,7 +1,11 @@
-package edu.cit.belen.pantrypulse.controller;
+package edu.cit.belen.pantrypulse.admin;
 
-import edu.cit.belen.pantrypulse.model.*;
-import edu.cit.belen.pantrypulse.repository.*; // This imports all repositories
+import edu.cit.belen.pantrypulse.user.User;
+import edu.cit.belen.pantrypulse.user.UserRepository;
+import edu.cit.belen.pantrypulse.inventory.InventoryLog;
+import edu.cit.belen.pantrypulse.inventory.InventoryLogRepository;
+import edu.cit.belen.pantrypulse.recipe.Recipe;
+import edu.cit.belen.pantrypulse.recipe.RecipeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package edu.cit.belen.pantrypulse.model;
+package edu.cit.belen.pantrypulse.recipe;
 
 import jakarta.persistence.*;
 

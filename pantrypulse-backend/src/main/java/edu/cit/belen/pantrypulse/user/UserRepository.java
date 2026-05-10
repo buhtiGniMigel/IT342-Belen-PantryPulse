@@ -1,6 +1,5 @@
-package edu.cit.belen.pantrypulse.repository;
+package edu.cit.belen.pantrypulse.user;
 
-import edu.cit.belen.pantrypulse.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 
