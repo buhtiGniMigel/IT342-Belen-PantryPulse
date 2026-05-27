@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="16dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#E5E7EB">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fresh Milk"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#111827"/>
+
+            <TextView
+                android:id="@+id/tvItemCategoryAndQty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dairy • 2.0 Units"
+                android:textSize="13sp"
+                android:textColor="#6B7280"
+                android:layout_marginTop="2dp"/>
+
+            <TextView
+                android:id="@+id/tvItemExpiry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Expires: 2026-05-30"
+                android:textSize="12sp"
+                android:textColor="#9CA3AF"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+        <!-- Freshness Status Chip -->
+        <FrameLayout
+            android:id="@+id/flStatusChip"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_card"
+            android:backgroundTint="#F0FDF4"
+            android:layout_marginEnd="12dp">
+
+            <TextView
+                android:id="@+id/tvStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Fresh"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#166534"/>
+        </FrameLayout>
+
+        <!-- Edit/Delete Action Icons -->
+        <ImageView
+            android:id="@+id/btnEditItem"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_person"
+            android:padding="6dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Edit Item"
+            app:tint="#6B7280" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

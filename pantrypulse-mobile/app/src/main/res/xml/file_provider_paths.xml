@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- For camera captures saved to app's external cache -->
+    <external-cache-path name="camera_captures" path="." />
+    <!-- For camera captures saved to app's internal cache -->
+    <cache-path name="camera_captures_internal" path="." />
+</paths>

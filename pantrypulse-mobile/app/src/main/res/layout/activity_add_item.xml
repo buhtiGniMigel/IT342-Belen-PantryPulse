@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9FAFB"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/tvAddTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Item"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#111827"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Item Name Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#374151"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etItemName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:hint="e.g. Fresh Eggs"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Category Dropdown -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#374151"
+            android:layout_marginBottom="6dp"/>
+
+        <Spinner
+            android:id="@+id/spCategory"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:layout_marginBottom="16dp"
+            android:paddingHorizontal="16dp" />
+
+        <!-- Quantity Input -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quantity"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#374151"
+            android:layout_marginBottom="6dp"/>
+
+        <EditText
+            android:id="@+id/etQuantity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_input"
+            android:hint="e.g. 1.0"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="16dp"
+            android:textSize="14sp"
+            android:textColor="#1F2937"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Expiry Date Picker -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Expiry Date"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#374151"
+            android:layout_marginBottom="6dp"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etExpiryDate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_input"
+                android:hint="Select Date (YYYY-MM-DD)"
+                android:focusable="false"
+                android:clickable="true"
+                android:paddingHorizontal="16dp"
+                android:textSize="14sp"
+                android:textColor="#1F2937" />
+
+        </FrameLayout>
+
+        <!-- Expiration Photo Scanner Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/bg_card"
+            android:backgroundTint="#F3F4F6"
+            android:layout_marginBottom="20dp"
+            android:elevation="1dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnScanExpiry"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:text="Scan Expiry Label"
+                android:textAllCaps="false"
+                android:textColor="#374151"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_camera"
+                android:drawableTint="#374151"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:drawablePadding="8dp"
+                android:background="@drawable/bg_card"
+                android:backgroundTint="#FFFFFF"
+                android:elevation="1dp"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp">
+
+                <ImageView
+                    android:id="@+id/ivExpiryPhoto"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    android:background="@drawable/bg_card"
+                    android:backgroundTint="#E5E7EB"
+                    android:contentDescription="Expiration Label Photo" />
+
+                <ProgressBar
+                    android:id="@+id/pbScanProgress"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:indeterminateTint="#2E7D32" />
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <!-- Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textAllCaps="false"
+                android:textColor="#374151"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_card"
+                android:backgroundTint="#F3F4F6"
+                android:layout_marginEnd="8dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1.5"
+                android:text="Save Item"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:background="@drawable/selector_button_primary"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- Delete Button (Only visible during editing!) -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Delete Item"
+            android:textAllCaps="false"
+            android:textColor="#EF4444"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:background="@drawable/bg_card"
+            android:backgroundTint="#FEE2E2"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+</ScrollView>
